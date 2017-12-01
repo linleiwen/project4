@@ -1,3 +1,4 @@
+### Count by SR Type
 SELECT Service_type.sr_type_code, Service_type.sr_description, COUNT(*) AS count
 <br>
 FROM facts
