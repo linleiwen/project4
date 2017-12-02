@@ -31,4 +31,11 @@
     JOIN Service_type ON facts.Service_type_key = Service_type.Service_type_key
     GROUP BY owning_department
     ORDER BY count DESC
-    LIMIT 10;
+    LIMIT 10;
+### Count by Dep and year
+    SELECT hour.year, Service_type.owning_department, COUNT(owning_department) AS count
+    FROM facts 
+    JOIN Service_type ON facts.Service_type_key = Service_type.Service_type_key
+    JOIN hour ON facts.created_date_key = hour.hour_key
+    GROUP BY year, owning_department
+    ORDER BY year, count DESC;
