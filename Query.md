@@ -26,10 +26,9 @@
 这个地方我想加个loop,来看每个月的top 5 types，但搞了半天也没弄出来，所以就先用where = 来一个个看了，这里只写了6月份（记录最多的）
 
 ### Count by Department
-%%sql
-SELECT Service_type.owning_department, COUNT(*) AS count
-FROM facts 
-JOIN Service_type ON facts.Service_type_key = Service_type.Service_type_key
-GROUP BY owning_department
-ORDER BY count DESC
-LIMIT 10;
+    SELECT Service_type.owning_department, COUNT(*) AS count
+    FROM facts 
+    JOIN Service_type ON facts.Service_type_key = Service_type.Service_type_key
+    GROUP BY owning_department
+    ORDER BY count DESC
+    LIMIT 10;
