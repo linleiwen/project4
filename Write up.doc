@@ -1,0 +1,27 @@
+Selection:
+
+311 Unified Data (Utilities and City Services)
+"Non-emergency 311 call systems, used increasingly in U.S. cities, offer a number of advantages. They give citizens a quick, convenient way to kvetch about problems in their neighborhoods, and get a response." (Reference: NextCity, Website)
+https://data.austintexas.gov/Utilities-and-City-Services/311-Unified-Data/i26j-ai4z
+Since the data is updating currently, we choose the data from XX/XX/XXXX until XX/XX/XXXX.
+  Reasons:
+    Relatively clean, and complete.
+    Interest to this unfamiliar dial, unlike 911.
+  Questions:
+    The pattern of City Services Requests, between different type and corresponding time, location, and method.
+    Calculating the duration between request created and closed, in order to see how efficient of city services
+  Concerns:
+  
+  Challenges:
+
+Wrangling:
+
+Star Schema: Four dimension tables, and one fact table.
+  Process:
+  Challenges:
+  Assumptions:
+  Verification:
+  
+ Analysis:
+ 
+ 
