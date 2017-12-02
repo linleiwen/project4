@@ -20,4 +20,5 @@
     WHERE hour.month_of_year = 6
     GROUP BY 1,2
     ORDER BY count DESC
-    LIMIT 5;
+    LIMIT 5;
+这个地方我想加个loop,来看每个月的top 5 types，但搞了半天也没弄出来，所以就先用where = 来一个个看了，这里只写了6月份（记录最多的）
