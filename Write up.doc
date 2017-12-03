@@ -26,12 +26,16 @@ Star Schema: Four dimension tables, and one fact table.
  
  1. Service type
  The most is Austin Code-Request Code Officer. But four of the top ten service types are related to animals (Dead animals, loose dog,    animal control, injured/sick animals). Q: Why so many service cases related to animals? (查点文字资料）
+ 
  2. Number of cases among months
  The number of cases increases with the tempretures. When in summer, the number of cases reach the highest and when in winter, it decreases to the least. (和Austin tempreture dataset 一起分析)
+ 
  3. Top 5 rank of service type over month
  For all month, the top 1 service type is Austin Code. (画图后再写，表格太长）
+ 
  4. Owning Department
  The top ten departments with most cases are Austin Code Department, Animal Services Office, Austin Resource Recovery, Transportation, Transportation, Parks & Recreation Department, Austin Energy Department, Health & Human Services, Economic Development Department, Austin Water Utility. The top 3 departments all have more than 60,000 cases while the last 5 ones are all lower than 20000. Among all these, it is abnormal to see animal departments have such high number of cases.
+ 
  5. Proportion of case number of top 5 departments over time (趋势不是很明显）
  Code Department: slitly upward
  Animal service: downward trend
