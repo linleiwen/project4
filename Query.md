@@ -39,3 +39,17 @@
     JOIN hour ON facts.created_date_key = hour.hour_key
     GROUP BY year, owning_department
     ORDER BY year, count DESC;
+    
+
+### Count by Dep and year and month(我对上上面一个做了修改，只针对top 5 popular department 做count)
+    SELECT hour.year, hour.month_of_year,  Service_type.owning_department, COUNT(owning_department) AS count
+    FROM facts 
+    JOIN Service_type ON facts.Service_type_key = Service_type.Service_type_key
+    JOIN hour ON facts.created_date_key = hour.hour_key
+    Where Service_type.owning_department = 'Austin Code Department'
+    OR Service_type.owning_department = 'Animal Services Office'
+    OR Service_type.owning_department ='Austin Resource Recovery'
+    OR Service_type.owning_department ='Transportation'
+    OR Service_type.owning_department ='Public Works'
+    GROUP BY 1,2, owning_department
+    ORDER BY 1,2, count DESC;
