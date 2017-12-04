@@ -56,66 +56,69 @@
 
 ### analysis 6
 
-table = pdsql.read_sql('''
-SELECT Method,year
-FROM Method 
-JOIN facts
-ON Method.method_key=facts.method_key
-JOIN hour
-ON facts.created_date_key=hour.hour_key;
-''',conn)
-%matplotlib inline
-list=table.method.unique()
+	table = pdsql.read_sql('''
+	SELECT Method,year
+	FROM Method 
+	JOIN facts
+	ON Method.method_key=facts.method_key
+	JOIN hour
+	ON facts.created_date_key=hour.hour_key;
+	''',conn)
+	%matplotlib inline
+	list=table.method.unique()
 
-##### 这里我把所有图表用的Pandas都存在了一个List里，如果只画图不保留Pandas的话就把dataframe_collection都删掉，把bar()接在前一个等式后面。
-dataframe_collection = {}
+这里我把所有图表用的Pandas都存在了一个List里，如果只画图不保留Pandas的话就把dataframe_collection都删掉，把bar()接在前一个等式后面。
 
-for i in list:
-	dataframe_collection[i]=table.filter(table.Method==i).groupby(table.year).count().orderBy("year", ascending=False)
-	dataframe_collection[i].bar()
-	print('\n')
-del table
+	dataframe_collection = {}
+
+	for i in list:
+		dataframe_collection[i]=table.filter(table.Method==i).groupby(table.year).count().orderBy("year", ascending=False)
+		dataframe_collection[i].bar()
+		print('\n')
+	del table
 
 ### analysis 7
 
-table = pdsql.read_sql('''
-SELECT 'SR Description',year
-FROM Service_type 
-JOIN facts
-ON Service_type.Service_type_key=facts.Service_type_key
-JOIN hour
-ON facts.created_date_key=hour.hour_key;
-''',conn)
-%matplotlib inline
-list=table['SR Description'].unique()
+	table = pdsql.read_sql('''
+	SELECT 'SR Description',year
+	FROM Service_type 
+	JOIN facts
+	ON Service_type.Service_type_key=facts.Service_type_key
+	JOIN hour
+	ON facts.created_date_key=hour.hour_key;
+	''',conn)
+	%matplotlib inline
+	list=table['SR Description'].unique()
 
-##### 同上。
-dataframe_collection = {}
+同上。
 
-for i in list:
-	dataframe_collection[i]=table.filter(table.Method==i).groupby(table.year).count().orderBy("year", ascending=False)
-	dataframe_collection[i].bar()
-	print('\n')
-del table
+	dataframe_collection = {}
+
+	for i in list:
+		dataframe_collection[i]=table.filter(table.Method==i).groupby(table.year).count().orderBy("year", ascending=False)
+		dataframe_collection[i].bar()
+		print('\n')
+	del table
 
 ### analysis 8
 
-table = pdsql.read_sql('''
-SELECT 'Owning Department',year
-FROM Service_type 
-JOIN facts
-ON Service_type.Service_type_key=facts.Service_type_key
-JOIN hour
-ON facts.created_date_key=hour.hour_key;
-''',conn)
-%matplotlib inline
-list=table['Owning Department'].unique()
+	table = pdsql.read_sql('''
+	SELECT 'Owning Department',year
+	FROM Service_type 
+	JOIN facts
+	ON Service_type.Service_type_key=facts.Service_type_key
+	JOIN hour
+	ON facts.created_date_key=hour.hour_key;
+	''',conn)
+	%matplotlib inline
+	list=table['Owning Department'].unique()
 
-##### 同上。
-dataframe_collection = {}
+同上。
 
-for i in list:
-	dataframe_collection[i]=table.filter(table.Method==i).groupby(table.year).count().orderBy("year", ascending=False)
-	dataframe_collection[i].bar()
-	print('\n')
-del table
+	dataframe_collection = {}
+
+	for i in list:
+		dataframe_collection[i]=table.filter(table.Method==i).groupby(table.year).count().orderBy("year", ascending=False)
+		dataframe_collection[i].bar()
+		print('\n')
+	del table
