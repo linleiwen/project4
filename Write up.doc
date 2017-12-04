@@ -43,6 +43,13 @@ Star Schema: Four dimension tables, and one fact table.
  Public work:
  Transportation: 
  
+ 6. The trends of request methods over years. (代码我写在另一个文件里，用循环对每种method都做了图)
+ Digital reporting methods, such as web and social media, are growing over years.
+ 
+ 7. The trends of request types over years. (同上)
+ 
+ 8. The change in the number of cases in each department over years. (同上)
+ 
  Argument (bonus):
  1. Relationship of number of cases with tempreture
  
