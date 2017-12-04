@@ -95,7 +95,7 @@
 	dataframe_collection = {}
 
 	for i in list:
-		dataframe_collection[i]=table.filter(table.Method==i).groupby(table.year).count().orderBy("year", ascending=False)
+		dataframe_collection[i]=table.filter(table['SR Description']==i).groupby(table.year).count().orderBy("year", ascending=False)
 		dataframe_collection[i].bar()
 		print('\n')
 	del table
@@ -118,7 +118,7 @@
 	dataframe_collection = {}
 
 	for i in list:
-		dataframe_collection[i]=table.filter(table.Method==i).groupby(table.year).count().orderBy("year", ascending=False)
+		dataframe_collection[i]=table.filter(table['Owning Department']==i).groupby(table.year).count().orderBy("year", ascending=False)
 		dataframe_collection[i].bar()
 		print('\n')
 	del table
