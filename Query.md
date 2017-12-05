@@ -53,6 +53,14 @@
     OR Service_type.owning_department ='Public Works'
     GROUP BY 1,2, owning_department
     ORDER BY 1,2, count DESC;
+    
+### count by method received
+    Select method.method, count(*) as count
+    From facts join method
+    On facts.method_key=method.method_key
+    Group by method
+    Order by count desc;
+    
 
 ### analysis 6
 
