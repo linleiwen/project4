@@ -43,11 +43,12 @@ Star Schema: Four dimension tables, and one fact table.
  Public work:
  Transportation: 
  
+ 6. The number of cases received through each method over years.
+ Field Request and E-Mail usage declined dramatically over years, indicating that Austin may graduately decrease the budget for them.
+ 
  Argument (bonus):
  1. Relationship of number of cases with tempreture
- Number of cases among months
  The number of cases increases with the tempretures. When in summer, the number of cases reach the highest and when in winter, it decreases to the least. (和Austin tempreture dataset 一起分析)
- 
  
  
  
